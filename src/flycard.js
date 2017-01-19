@@ -2,7 +2,7 @@
 function addLoadEvent(func) {
 	var oldonload=window.onload;
 	if(typeof oldonload !== "function"){
-		window.onload=func();
+		window.onload=func;
 	} else{
 		window.onload=function () {
 			oldonload();
@@ -39,6 +39,7 @@ function gooo() {
     }, 10);
 }
 function load() {
+	if(!document.getElementById("button")) return false;
     var btn=document.getElementById("button");
     btn.onclick=gooo;
 }

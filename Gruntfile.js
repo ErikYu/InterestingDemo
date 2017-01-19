@@ -19,7 +19,7 @@ module.exports=function(grunt){
 		},
 		watch:{
 			build: {
-				files: ['src/js/*.js'],
+				files: ['src/*.js'],
 				tasks: ['jshint', 'uglify'],
 				options: {spawn: false}
 			}

@@ -1,0 +1,30 @@
+@sliderWidth: 800px;
+@sliderHeight: 400px;
+
+*{
+  margin: 0;
+  padding: 0;
+}
+.slider{
+  width:@sliderWidth;
+  height:@sliderHeight;
+  .back{
+    background: url(https://unsplash.it/1600/800/?image=931);
+    background-size: cover;
+    height:100%;
+    //filter: blur(1px);
+  }
+  .wrapper{
+    height:300px;
+    width:600px;
+    overflow: hidden;
+    .inner{
+      background: url(https://unsplash.it/1600/800/?image=931);
+      background-size: cover;
+      //transform: translateY(-400px);
+      height:@sliderHeight;
+      width:@sliderWidth;
+    }
+  }
+
+}
