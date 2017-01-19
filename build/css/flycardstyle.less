@@ -1,0 +1,29 @@
+@testborder: 1px solid;
+@deskHeight: 500px;
+*{
+  margin: 0;
+  padding:0;
+}
+.desk{
+  width: 500px;
+  height: @deskHeight;
+  position: relative;
+  //border:@testborder;
+  overflow: hidden;
+  .path{
+    position: absolute;
+    height: @deskHeight;
+    //border:@testborder;
+    transform: rotate(25deg);
+    bottom: -200px;
+    left:50%;
+    .card{
+      position: absolute;
+      transform: translateY(@deskHeight) scale(3);
+    }
+    .card.throw{
+      transform: translateY(0px) scale(1);
+      transition: all 1s ease-in-out;
+    }
+  }
+}
