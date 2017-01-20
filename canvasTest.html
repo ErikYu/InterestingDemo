@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+    <style>
+        .myCanvas{
+            width: 200px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <canvas class="myCanvas"></canvas>
+    <canvas class="myCanvas"></canvas>
+    <canvas class="myCanvas"></canvas>
+    <script>
+        var c=document.getElementsByClassName("myCanvas");
+        var cxt=c[0].getContext("2d");
+        cxt.fillStyle="#FF0000";
+        cxt.fillRect(0,0,150,75)
+
+        var dxt=c[1].getContext("2d");
+        dxt.moveTo(10,10);
+        dxt.lineTo(150,50);
+        dxt.lineTo(10,50);
+        dxt.stroke();
+
+        var ext=c[2].getContext("2d");
+        ext.fillStyle="#FF0000";
+        ext.beginPath();
+        ext.arc(100,50,25,0,1.5*Math.PI,false);
+        ext.stroke();
+        ext.fill();
+    </script>
+</body>
+</html>

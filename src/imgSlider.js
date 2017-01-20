@@ -1,7 +1,5 @@
-$(function () {
-    showZone();
-});
 function showZone() {
+    if(!$('h3')) return false;
     var $next=$('h3');
     var $slideBanner=$('.slideBanner');
     $next.click(function () {
@@ -11,4 +9,5 @@ function showZone() {
             $slideBanner.animate({'left':'0px'}, 1000);
         }
     });
-}
+};
+addLoadEvent(showZone());
